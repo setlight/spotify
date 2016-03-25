@@ -1,0 +1,25 @@
+{
+  "name": "spotify",
+  "version": "0.1.0",
+  "description": "Simple spotify app built with React + Redux",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grvcoelho/spotify.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "spotify",
+    "api"
+  ],
+  "author": "Guilherme Rv Coelho <@grvcoelho>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grvcoelho/spotify/issues"
+  },
+  "homepage": "https://github.com/grvcoelho/spotify#readme"
+}
