@@ -47,6 +47,9 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "humps": "^1.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "normalizr": "^2.0.1",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "redux": "^3.3.1"
