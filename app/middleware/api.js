@@ -2,7 +2,7 @@ import { normalize } from 'normalizr'
 import { camelizeKeys } from 'humps'
 import 'isomorphic-fetch'
 
-export API_ROOT = 'https://api.spotify.com/'
+const API_ROOT = 'https://api.spotify.com/'
 export const CALL_API = Symbol('Call API')
 
 function callApi(endpoint, schema) {
@@ -64,10 +64,10 @@ export default function middleware(store) {
                 response,
                 type: successType
             })),
-            error => next(actionWith() {
+            error => next(actionWith({
                 error: error,
                 type: failureType
-            })
+            }))
         )
     }
 }
