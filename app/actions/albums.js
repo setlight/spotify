@@ -1,4 +1,5 @@
 import { CALL_API } from '../middleware/api'
+import Schemas from './schemas'
 
 export const ALBUM_REQUEST = 'ALBUM_REQUEST'
 export const ALBUM_SUCCESS = 'ALBUM_SUCCESS'
@@ -8,12 +9,13 @@ function fetchAlbum(id) {
     return {
         [CALL_API]: {
             types: [ ALBUM_REQUEST, ALBUM_SUCCESS, ALBUM_FAILURE ],
-            endpoint: `albums/${id}`
+			endpoint: `albums/${id}`,
+			schema: Schemas.ALBUM
         }
     }
 }
 
-function loadAlbum(id, requiredFields = []) {
+export function loadAlbum(id, requiredFields = []) {
     return (dispatch, getState) => {
         const album = getState().entities.albums[id]
 
