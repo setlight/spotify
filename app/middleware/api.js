@@ -10,7 +10,7 @@ function callApi(endpoint, schema) {
 
     return fetch(finalUrl)
         .then(response => {
-            return response.json().then(json => { json, response })
+            return response.json().then(json => ({ json, response }))
         })
         .then(({ json, response }) => {
             if (!response.ok) {
