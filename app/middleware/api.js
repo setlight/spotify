@@ -2,7 +2,7 @@ import { normalize } from 'normalizr'
 import { camelizeKeys } from 'humps'
 import 'isomorphic-fetch'
 
-const API_ROOT = 'https://api.spotify.com/'
+const API_ROOT = 'https://api.spotify.com/v1/'
 export const CALL_API = Symbol('Call API')
 
 function callApi(endpoint, schema) {

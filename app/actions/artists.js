@@ -1,4 +1,5 @@
 import { CALL_API } from '../middleware/api'
+import Schemas from './schemas'
 
 export const ARTIST_REQUEST = 'ARTIST_REQUEST'
 export const ARTIST_SUCCESS = 'ARTIST_SUCCESS'
@@ -8,7 +9,8 @@ function fetchArtist(id) {
     return {
         [CALL_API]: {
             types: [ ARTIST_REQUEST, ARTIST_SUCCESS, ARTIST_FAILURE ],
-            endpoint: `artists/${id}`
+			endpoint: `artists/${id}`,
+			schema: Schemas.ARTIST
         }
     }
 }

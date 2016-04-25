@@ -1,7 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import configureStore from './store/configure-store'
 import './styles'
-import fetch from 'isomorphic-fetch'
+
+const store = configureStore()
 
 ReactDOM.render(
     <h1>Hello World!</h1>,
