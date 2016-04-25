@@ -1,17 +1,8 @@
-import { merge } from 'ramda'
+import { combineReducers } from 'redux'
+import entities from './entities'
 
-const initialState = {
-	entities: {
-		albums: {},
-		artists: {},
-		tracks: {}
-	}
-}
+const rootReducer = combineReducers({
+	entities
+})
 
-export default function entities(state = initialState, action) {
-	if (action.response && action.response.entities) {
-		return merge(state, action.response.entities)
-	}
-
-	return state
-}
+export default rootReducer
