@@ -17,15 +17,17 @@ const trackSchema = new Schema('tracks', {
 })
 
 trackSchema.define({
-    album: albumSchema
+    album: albumSchema,
     artists: arrayOf(artistSchema)
 })
 
-export const Schemas = {
+const Schemas = {
     ARTIST: artistSchema,
     ARTIST_ARRAY: arrayOf(artistSchema),
     ALBUM: albumSchema,
     ALBUM_ARRAY: arrayOf(albumSchema),
     TRACK: trackSchema,
-    TRACK_ARRAY: arrayOf(trackSchema),
+    TRACK_ARRAY: arrayOf(trackSchema)
 }
+
+export default Schemas

@@ -1,9 +1,11 @@
 import { merge } from 'ramda'
 
 const initialState = {
-	albums: {},
-	artists: {},
-	tracks: {}
+	entities: {
+		albums: {},
+		artists: {},
+		tracks: {}
+	}
 }
 
 export default function entities(state = initialState, action) {
