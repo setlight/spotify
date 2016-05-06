@@ -19,7 +19,7 @@ function callApi(endpoint, schema) {
 
             const camelizedJson = camelizeKeys(json)
 
-            return normalize(camelizedJson, schema)
+            return schema ? normalize(camelizedJson, schema) : camelizedJson
         })
 }
 
@@ -35,10 +35,6 @@ export default function middleware(store) {
 
         if (typeof endpoint !== 'string') {
             throw new Error('Specify a string endpoint URL')
-        }
-
-        if (!schema) {
-            throw new Error('Specify one of the exported Schemas.')
         }
 
         if (!Array.isArray(types) && types.length !== 3) {
