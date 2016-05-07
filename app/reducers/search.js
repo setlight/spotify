@@ -4,8 +4,10 @@ import { SEARCH_SUCCESS } from '../actions/search'
 const initialState = {}
 
 export default function search(state = initialState, action) {
-    if (action.type === SEARCH_SUCCESS) {
-        return merge(state, action.response)
+    const { type, response } = action
+
+    if (type === SEARCH_SUCCESS) {
+        return merge(state, response)
     }
 
     return state

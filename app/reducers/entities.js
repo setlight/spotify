@@ -7,8 +7,10 @@ const initialState = {
 }
 
 export default function entities(state = initialState, action) {
-	if (action.response && action.response.entities) {
-		return merge(state, action.response.entities)
+    const response = { action }
+
+	if (response && response.entities) {
+		return merge(state, response.entities)
 	}
 
 	return state
