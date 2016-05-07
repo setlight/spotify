@@ -1,7 +1,9 @@
 const initialState = null
 
 export default function error(state = initialState, action) {
-    const { error } = action
+    if (action.error) {
+        return action.error
+    }
 
-    return error ? error : state
+    return state
 }

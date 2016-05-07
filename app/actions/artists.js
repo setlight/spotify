@@ -8,9 +8,9 @@ export const ARTIST_FAILURE = 'ARTIST_FAILURE'
 function fetchArtist(id) {
     return {
         [CALL_API]: {
-            types: [ ARTIST_REQUEST, ARTIST_SUCCESS, ARTIST_FAILURE ],
-			endpoint: `artists/${id}`,
-			schema: Schemas.ARTIST
+            types: [ARTIST_REQUEST, ARTIST_SUCCESS, ARTIST_FAILURE],
+            endpoint: `artists/${id}`,
+            schema: Schemas.ARTIST
         }
     }
 }

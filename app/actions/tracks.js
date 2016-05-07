@@ -8,9 +8,9 @@ export const TRACK_FAILURE = 'TRACK_FAILURE'
 function fetchTrack(id) {
     return {
         [CALL_API]: {
-			types: [ TRACK_REQUEST, TRACK_SUCCESS, TRACK_FAILURE ],
-			endpoint: `tracks/${id}`,
-			schema: Schemas.TRACK
+            types: [TRACK_REQUEST, TRACK_SUCCESS, TRACK_FAILURE],
+            endpoint: `tracks/${id}`,
+            schema: Schemas.TRACK
         }
     }
 }
