@@ -8,9 +8,9 @@ export const ALBUM_FAILURE = 'ALBUM_FAILURE'
 function fetchAlbum(id) {
     return {
         [CALL_API]: {
-            types: [ ALBUM_REQUEST, ALBUM_SUCCESS, ALBUM_FAILURE ],
-			endpoint: `albums/${id}`,
-			schema: Schemas.ALBUM
+            types: [ALBUM_REQUEST, ALBUM_SUCCESS, ALBUM_FAILURE],
+            endpoint: `albums/${id}`,
+            schema: Schemas.ALBUM
         }
     }
 }

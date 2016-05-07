@@ -9,9 +9,9 @@ function callApi(endpoint, schema) {
     const finalUrl = (endpoint.indexOf(API_ROOT) === -1) ? API_ROOT + endpoint : endpoint
 
     return fetch(finalUrl)
-        .then(response => {
-            return response.json().then(json => ({ json, response }))
-        })
+        .then(response =>
+            response.json().then(json => ({ json, response }))
+        )
         .then(({ json, response }) => {
             if (!response.ok) {
                 return Promise.reject(json)
@@ -23,7 +23,7 @@ function callApi(endpoint, schema) {
         })
 }
 
-export default function middleware(store) {
+export default function middleware() {
     return next => action => {
         const API_ACTION = action[CALL_API]
 
@@ -45,7 +45,7 @@ export default function middleware(store) {
             throw new TypeError('Expected action types to be strings')
         }
 
-        const [ requestType, successType, failureType ] = types
+        const [requestType, successType, failureType] = types
 
         function actionWith(data) {
             const finalAction = Object.assign({}, action, data)
@@ -61,7 +61,7 @@ export default function middleware(store) {
                 type: successType
             })),
             error => next(actionWith({
-                error: error,
+                error,
                 type: failureType
             }))
         )
