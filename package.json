@@ -4,9 +4,10 @@
   "description": "Simple spotify app built with React + Redux",
   "main": "app/index.js",
   "scripts": {
-    "test": "ava --require babel-register",
     "build": "webpack",
-    "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000"
+    "lint": "eslint app/**/*.js",
+    "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000",
+    "test": "ava --require babel-register"
   },
   "repository": {
     "type": "git",
