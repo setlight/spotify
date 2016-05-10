@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var rucksack = require('rucksack-css');
-var cssnext = require('cssnext');
+var cssnext = require('postcss-cssnext');
 var path = require('path');
 
 module.exports = {
@@ -65,6 +65,6 @@ function loaders() {
 function postcss() {
     return [
         cssnext,
-        rucksack({ autoprefixer: true })
+        rucksack
     ];
 }
