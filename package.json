@@ -5,9 +5,10 @@
   "main": "app/index.js",
   "scripts": {
     "build": "webpack",
-    "lint": "eslint app/**/*.js",
+    "lint": "eslint app/**/*.js test/**/*.js",
     "start": "webpack-dev-server -d --history-api-fallback --hot --inline --progress --colors --port 3000",
-    "test": "ava --require babel-register"
+    "test": "ava --require babel-register",
+    "test:watch": "ava --watch --require babel-register"
   },
   "repository": {
     "type": "git",
