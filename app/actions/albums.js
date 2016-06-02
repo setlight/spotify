@@ -1,4 +1,4 @@
-import { CALL_API } from '../middleware/api'
+import { CALL_API } from 'middleware/api'
 import Schemas from './schemas'
 
 export const ALBUM_REQUEST = 'ALBUM_REQUEST'

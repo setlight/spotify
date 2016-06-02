@@ -1,5 +1,5 @@
 import { merge } from 'ramda'
-import { SEARCH_SUCCESS } from '../actions/search'
+import { SEARCH_SUCCESS } from 'actions/search'
 
 const initialState = {}
 
