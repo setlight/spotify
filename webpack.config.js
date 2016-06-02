@@ -18,6 +18,7 @@ module.exports = {
         loaders: loaders()
     },
     resolve: {
+        modulesDirectories: ['app', 'node_modules'],
         extensions: ['', '.js', '.jsx', '.css']
     },
     postcss: postcss
