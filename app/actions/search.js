@@ -1,5 +1,5 @@
 import { stringify } from 'qs'
-import { CALL_API } from '../middleware/api'
+import { CALL_API } from 'middleware/api'
 
 export const SEARCH_REQUEST = 'SEARCH_REQUEST'
 export const SEARCH_SUCCESS = 'SEARCH_SUCCESS'

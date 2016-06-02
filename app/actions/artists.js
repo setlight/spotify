@@ -1,4 +1,4 @@
-import { CALL_API } from '../middleware/api'
+import { CALL_API } from 'middleware/api'
 import Schemas from './schemas'
 
 export const ARTIST_REQUEST = 'ARTIST_REQUEST'
